@@ -78,6 +78,35 @@ body {
 #hamburger-menu {
   display: none;
 }
+.navbar .search-form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  padding: 1rem;
+}
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg-color);
+}
 /*-------------hero-section-----------------*/
 .hero {
   min-height: 100vh;
@@ -302,6 +331,9 @@ footer .credit a {
   }
   .navbar .navbar-mid a:hover::after {
     transform: scaleX(0.3);
+  }
+  .navbar .search-form {
+    width: 70%;
   }
   .about .row {
     flex-wrap: wrap;
